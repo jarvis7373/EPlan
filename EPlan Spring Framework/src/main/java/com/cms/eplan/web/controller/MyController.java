@@ -22,8 +22,15 @@ public class MyController {
 	
 	@RequestMapping("/homePage")
 	public String homePage(ModelMap map){
-		System.out.println("vaslue : "+service.getProductList());
+		//System.out.println("vaslue : "+service.getProductList());
 		map.put("productList", service.getProductList());
 		return "home";
+	}
+	
+	@RequestMapping("/model")
+	public String getProductModel(){
+		
+		
+		return "";
 	}
 }
