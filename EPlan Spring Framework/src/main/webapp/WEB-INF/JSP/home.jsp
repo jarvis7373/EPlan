@@ -2,12 +2,14 @@
 <%@include file="header.jsp"%>
 
 <script>
-$('.product').onchange(function(){
+$(document).ready(function () {
+$(product).onchange(function(){
 var productId= this.val();
 	$.get("/model?productId="+productId,function(data,status){
 		
 		console.log("data ===> "+data);
 	});
+});
 });
 
 

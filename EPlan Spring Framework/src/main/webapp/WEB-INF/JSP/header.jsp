@@ -10,11 +10,16 @@
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >
 <style type="text/css">
 .navbar-inverse {
-    background-color: #e2d7d7;
+     background-color: #e2d7d7; 
     border-color: #e0d4d4;
 }
+.navbar-inverse .navbar-brand {
+color: black;
+}
+.navbar-inverse .navbar-nav>li>a {
  
- 
+ color: black;
+}
 
 </style>
 </head>
@@ -22,7 +27,7 @@
 <nav class="navbar navbar-inverse" >
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#">Eplan Details</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
