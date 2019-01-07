@@ -1,14 +1,17 @@
 
 <%@include file="header.jsp"%>
 
+
+  
+
 <script>
 $(document).ready(function () {
 $(product).onchange(function(){
 var productId= this.val();
 	$.get("/model?productId="+productId,function(data,status){
-		
+		data
 		console.log("data ===> "+data);
-	});
+		});
 });
 });
 
