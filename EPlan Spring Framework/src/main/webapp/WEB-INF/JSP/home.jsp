@@ -68,9 +68,8 @@ var productId= $(this).val();
 <td>
  <label for="product">Engine</label>
 		<select id="product" class="form-control">
-		<option>Car</option>
-		<option>Truck</option>
-		<option>Bus</option>
+		<option>Petrol</option>
+		<option>diesel</option>
 		</select>
 </td>
 </tr>
