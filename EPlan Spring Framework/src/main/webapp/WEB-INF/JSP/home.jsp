@@ -6,8 +6,8 @@
 
 <script>
 $(document).ready(function () {
-$(product).onchange(function(){
-var productId= this.val();
+$('#productSel').change(function(){
+var productId= $(this).val();
 	$.get("/model?productId="+productId,function(data,status){
 		data
 		console.log("data ===> "+data);
@@ -32,7 +32,7 @@ var productId= this.val();
 <tr >
 <td rowspan="4">
   <label for="product">Select Your Product</label>
-		<select id="product" class="form-control">
+		<select id="productSel" class="form-control">
 		<option value ="" selected disabled="disabled">Choose Your Product</option>
 		<c:forEach items="${productList}"  var="productList">
 		<option value="${productList.id}" >${productList.displayName}</option>

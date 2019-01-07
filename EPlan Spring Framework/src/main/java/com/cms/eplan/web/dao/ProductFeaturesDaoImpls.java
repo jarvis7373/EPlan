@@ -1,39 +1,36 @@
-package com.cms.eplan.web.service;
+package com.cms.eplan.web.dao;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
-
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
-import com.cms.eplan.web.dao.ProductFeaturesDao;
 import com.cms.eplan.web.model.ProductFeatures;
 
 /**
  * 
- * @author Tamilselvan
+ * @author Tamilselvan T
  * Date : 03-01-2019
  *
  */
 
-@Service
-@Transactional
-public class ProductfeaturesImpls implements ProductFeaturesService {
+@Repository
+public class ProductFeaturesDaoImpls implements ProductFeaturesDao {
 
 	@Autowired
-	ProductFeaturesDao proFeatures;
+	SessionFactory sessionFactory;
 	
 	@Override
 	public List<ProductFeatures> getAllFeatures() {
 		// TODO Auto-generated method stub
-		return proFeatures.getAllFeatures();
+		return null;
 	}
 
 	@Override
 	public int save(ProductFeatures feature) {
 		// TODO Auto-generated method stub
-		return proFeatures.save(feature);
+		return 0;
 	}
 
 }
