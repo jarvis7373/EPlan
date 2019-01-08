@@ -85,4 +85,14 @@ public class Option {
 		this.activeFlag = activeFlag;
 	}
 
+	@Override
+	public String toString() {
+		return "Option [id=" + id + ", internalName=" + internalName
+				+ ", DisplayName=" + DisplayName + ", imageName=" + imageName
+				+ ", flagStatus=" + flagStatus + ", activeFlag=" + activeFlag
+				+ "]";
+	}
+	
+	
+
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.cms.eplan.web.dao.FeatureOptionDao;
 import com.cms.eplan.web.model.FeatureOptionMapp;
+import com.cms.eplan.web.model.Option;
 
 /**
  * 
@@ -22,7 +23,7 @@ public class FeatureOptionImpls implements FeatureOptionService {
 	FeatureOptionDao feature;
 	
 	@Override
-	public List<FeatureOptionMapp> findById(int id) {
+	public List<Option> findById(int id) {
 		// TODO Auto-generated method stub
 		return feature.findById(id);
 	}

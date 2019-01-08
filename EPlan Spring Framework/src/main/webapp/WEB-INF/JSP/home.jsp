@@ -7,10 +7,18 @@
 <script>
 $(document).ready(function () {
 $('#productSel').change(function(){
+	
 var productId= $(this).val();
-	$.get("/model?productId="+productId,function(data,status){
-		data
-		console.log("data ===> "+data);
+	$.get("/api/option?productId="+productId,function(data,status){
+		data=data+"";
+		var val=data.split(",");
+		$('#model').empty().append(" <option value ='' selected disabled='disabled'>Choose Your Model</option>");
+	    if(val.length>2){
+		for(var i=0;i<val.length;i++){
+			$('#model').append("<option>"+val[i]+"</option>")
+		
+		}
+	    }
 		});
 });
 });
@@ -42,10 +50,8 @@ var productId= $(this).val();
 </td>	
 <td>
  <label for="product">Model</label>
-		<select id="product" class="form-control">
-		<option>Car</option>
-		<option>Truck</option>
-		<option>Bus</option>
+		<select id="model" class="form-control">
+		 <option value ="" selected disabled="disabled">Choose Your Model</option>
 		</select>
 </td>
  
