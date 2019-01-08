@@ -23,44 +23,50 @@ public class FeatureOptionMapp {
 	private int id;
 
 	@Column(name = "PRODUCT_ID")
-	private Product product;
+	private int product;
 
 	@Column(name = "FEATURE_ID")
-	private ProductFeatures feature;
+	private int feature;
 
 	@Column(name = "OPTION_ID")
-	private Option option;
+	private int option;
 
-	public int getId() {
-		return id;
+	public FeatureOptionMapp(){
+		
 	}
-
-	public void setId(int id) {
+	
+	public FeatureOptionMapp(int id, int product, int feature, int option) {
+		super();
 		this.id = id;
+		this.product = product;
+		this.feature = feature;
+		this.option = option;
 	}
 
-	public Product getProduct() {
+	public int getProduct() {
 		return product;
 	}
 
-	public void setProduct(Product product) {
+	public void setProduct(int product) {
 		this.product = product;
 	}
 
-	public ProductFeatures getFeature() {
+	public int getFeature() {
 		return feature;
 	}
 
-	public void setFeature(ProductFeatures feature) {
+	public void setFeature(int feature) {
 		this.feature = feature;
 	}
 
-	public Option getOption() {
+	public int getOption() {
 		return option;
 	}
 
-	public void setOption(Option option) {
+	public void setOption(int option) {
 		this.option = option;
 	}
+
+	
 
 }
