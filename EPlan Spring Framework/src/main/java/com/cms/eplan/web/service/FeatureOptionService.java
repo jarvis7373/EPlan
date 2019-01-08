@@ -3,6 +3,7 @@ package com.cms.eplan.web.service;
 import java.util.List;
 
 import com.cms.eplan.web.model.FeatureOptionMapp;
+import com.cms.eplan.web.model.Option;
 
 /**
  * 
@@ -13,5 +14,5 @@ import com.cms.eplan.web.model.FeatureOptionMapp;
 
 public interface FeatureOptionService {
 
-	public List<FeatureOptionMapp> findById(int id);
+	public List<Option>  findById(int id);
 }

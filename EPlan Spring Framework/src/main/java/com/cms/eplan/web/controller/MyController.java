@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cms.eplan.web.model.FeatureOptionMapp;
+import com.cms.eplan.web.model.Option;
 import com.cms.eplan.web.service.FeatureOptionService;
 import com.cms.eplan.web.service.ProductService;
 
@@ -37,9 +38,10 @@ public class MyController {
 	
 	@RequestMapping("/model")
 	@ResponseBody
-	public List<FeatureOptionMapp> getProductModel(@RequestParam ("productId") int productId){
+	public List<Option> getProductModel(@RequestParam ("productId") int productId){
 		
-		System.out.println("list of values ==>"+featureOptionService.findById(productId));
+		System.out.println("list of values ==>"+(List<Option>)featureOptionService.findById(productId));
+		
 		return featureOptionService.findById(productId);
 	}
 }

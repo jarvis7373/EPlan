@@ -1,7 +1,9 @@
 package com.cms.eplan.web.dao;
 
 import java.util.List;
+
 import com.cms.eplan.web.model.FeatureOptionMapp;
+import com.cms.eplan.web.model.Option;
 
 /**
  * 
@@ -11,5 +13,5 @@ import com.cms.eplan.web.model.FeatureOptionMapp;
 
 public interface FeatureOptionDao {
 
-	public List<FeatureOptionMapp> findById(int id);
+	public List<Option> findById(int id);
 }
