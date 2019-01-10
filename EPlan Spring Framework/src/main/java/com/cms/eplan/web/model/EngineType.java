@@ -1,6 +1,8 @@
 package com.cms.eplan.web.model;
 
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "E_TYPE")
+@Table(name = "E_ENGINETYPE")
 public class EngineType {
 
 	@Id
@@ -17,7 +19,7 @@ public class EngineType {
 	@Column(name = "E_ID")
 	private int id;
 
-	@Column(name = "E_NAME")
+	@Column(name = "E_TYPE")
 	private String EName;
 
 	@Column(name = "DISPLAY_NAME")
@@ -79,5 +81,8 @@ public class EngineType {
 	public void setActiveFlag(String activeFlag) {
 		this.activeFlag = activeFlag;
 	}
+
+	
+	
 
 }

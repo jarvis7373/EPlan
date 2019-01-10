@@ -8,6 +8,7 @@
 		<version>2.1.1.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
+	
 	<groupId>com.cms.eplan.web</groupId>
 	<artifactId>EPlan</artifactId>
 	<version>0.0.1-SNAPSHOT</version>

@@ -19,6 +19,6 @@ public class SecurityConfiguration {
 	public void configGlobalSecurity(AuthenticationManagerBuilder authenticate) throws Exception {
 		
 		authenticate.inMemoryAuthentication().withUser("admin").password("{noop}admin").roles("USER");
-		System.out.println("Security configuration");
+		//System.out.println("Security configuration");
 	}
 }

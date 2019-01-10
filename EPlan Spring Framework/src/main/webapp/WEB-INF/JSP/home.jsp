@@ -21,6 +21,29 @@ var productId= $(this).val();
 	    }
 		});
 });
+
+
+$('#model').change(function(){
+	
+	var productId= $(this).val();
+		$.get("/api/EngineType?EngineType=1",function(data,status){
+			//data=data+"";
+			console.log("data ===>" +data);
+			//var val=data.split(",");
+			$('#Engine').empty().append(" <option value ='' selected disabled='disabled'>Choose Your Engine</option>");
+		  
+			for(var i=0;i<data.length;i++){
+				//$('#Engine').append("<option>"+data[i].EName+"</option>")
+				console.log("Engine ===>" +data);
+				
+			
+		    }
+			});
+	});
+
+
+
+
 });
 
 
@@ -54,6 +77,7 @@ var productId= $(this).val();
 		 <option value ="" selected disabled="disabled">Choose Your Model</option>
 		</select>
 </td>
+
  
 <!-- <td rowspan="4">
  <label for="product">Exclusion rule</label>
@@ -72,10 +96,10 @@ var productId= $(this).val();
 </tr>
 <tr>	
 <td>
- <label for="product">Engine</label>
-		<select id="product" class="form-control">
-		<option>Petrol</option>
-		<option>diesel</option>
+ <label for="Engine">Engine</label>
+		<select id="Engine" class="form-control">
+		<option value ="" selected disabled="disabled">Choose Your Engine</option>
+		
 		</select>
 </td>
 </tr>
@@ -83,9 +107,9 @@ var productId= $(this).val();
 <td>
  <label for="product">Transmission</label>
 		<select id="product" class="form-control">
-		<option>Car</option>
-		<option>Truck</option>
-		<option>Bus</option>
+		<option>Automatic</option>
+		<option>Manual</option>
+		<option>Semi Automatic</option>
 		</select>
 </td>
 

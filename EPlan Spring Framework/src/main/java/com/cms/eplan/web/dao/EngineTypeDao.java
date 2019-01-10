@@ -16,5 +16,5 @@ public interface EngineTypeDao {
 
 	public void addEngineType(EngineType Etype);
 	
-	public List<EngineType> getTypes();
+	public List<EngineType> getTypes(int id);
 }
