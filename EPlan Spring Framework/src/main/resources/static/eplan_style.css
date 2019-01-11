@@ -1,0 +1,70 @@
+
+/* Set height of body and the document to 100% */
+body, html {
+	width:90%;
+  padding-top:1%;
+  margin-left:2%;
+  font-family: Arial;
+  }
+.tab {
+	
+  overflow: hidden;
+  border: 1px solid #c9c9c9;
+  border-bottom:hidden;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #e4e4e4;
+  color:#727272;
+  float: left;
+  border-left:  1px solid #c9c9c9;
+  border-right:  1px solid #c9c9c9;
+  border-bottom:hidden;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+select{
+ width:100%;
+ border: 1px solid;
+ padding-left: 20px;
+ clear: both;
+ /*padding-top: 5%; */
+ /*padding-bottom: 5%; */
+ padding: 3%;
+ color:#727272;
+ display:block;
+ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+ font-size: 13px;
+	}
+table{
+	width:60%;
+	padding-top:2%;
+	}
+	
+tr, td {
+	padding-bottom:1%;
+	text-align: left; 
+    color:#727272;
+	padding-left:5%;
+  }
+
+.tablink:hover {
+  background-color: #fff;
+  color:#727272;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  padding: 100px 20px;
+  border:1px solid #C9C9C9;
+  
+}
+
+#Master {background-color: white;}
+#Home {background-color: white;}
+#Guide {background-color: white;}
