@@ -24,6 +24,16 @@ $('#model').change(function(){
 			});
 			});
 	});
+	
+$('#model').change(function(){
+	var productId= $(this).val();
+		$.get("/api/TransmissionType?TransmissionType=1",function(data,status){
+			$('#Transmission').empty().append(" <option value ='' selected disabled='disabled'>Choose Your Transmission</option>");
+			$.each(data,function(i,TransmissionType){
+				$('#Transmission').append("<option value="+TransmissionType.id+">"+TransmissionType.displayName+"</option>")
+			});
+			});
+	});
 });
 
 
@@ -85,11 +95,9 @@ $('#model').change(function(){
 </tr>
 <tr>	
 <td>
- <label for="product">Transmission</label>
-		<select id="product" class="form-control">
-		<option>Automatic</option>
-		<option>Manual</option>
-		<option>Semi Automatic</option>
+ <label for="Transmission">Transmission</label>
+		<select id="Transmission" class="form-control">
+		<option value ="" selected disabled="disabled">Choose Your Transmission</option>
 		</select>
 </td>
 

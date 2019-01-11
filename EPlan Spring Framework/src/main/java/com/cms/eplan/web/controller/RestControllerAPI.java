@@ -12,12 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cms.eplan.web.model.EngineType;
 import com.cms.eplan.web.model.Option;
+import com.cms.eplan.web.model.TransmissionType;
 import com.cms.eplan.web.service.EngineTypeService;
 import com.cms.eplan.web.service.FeatureOptionService;
+import com.cms.eplan.web.service.TransmissionTypeService;
 
 /**
  * 
- * @author Tamilselvan T
+ * @author Babu
  * Date : 08-01-2019
  *
  */
@@ -32,6 +34,8 @@ public class RestControllerAPI {
 	FeatureOptionService featureOptionService;
 	@Autowired
 	EngineTypeService typeofengine ;
+	@Autowired
+	TransmissionTypeService typeoftransmission;
 
 	
 	@GetMapping(value="/api/option",produces=MediaType.APPLICATION_JSON_VALUE)
@@ -51,4 +55,12 @@ public class RestControllerAPI {
 		return (List<EngineType>)typeofengine.getTypes(eid);
 	}
 
+	@GetMapping(value="/api/TransmissionType",produces=MediaType.APPLICATION_JSON_VALUE) 
+	@ResponseBody
+	public List<TransmissionType> getId(@RequestParam ("TransmissionType") int id){
+		
+		System.out.println("list of values ==>"+(List<TransmissionType>)typeoftransmission.getId(id));
+		
+		return (List<TransmissionType>)typeoftransmission.getId(id);
+	}
 }
