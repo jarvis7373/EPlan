@@ -38,7 +38,7 @@ public class FeatureOptionDaoImps implements FeatureOptionDao {
 		//List<Object> list =session.createQuery("SELECT optionId from FeatureOptionMapp where productId=:id").setParameter("id", id).getResultList();
 		List<FeatureOptionMapp> list  =session.createQuery("SELECT option from FeatureOptionMapp where product=:id").setParameter("id", id).getResultList();
 		if(list.size() > 0){
-			optionList=(List<Option>)session.createQuery("select DisplayName from Option where id in (:ids)").setParameterList("ids", list).getResultList();
+			optionList=(List<Option>)session.createQuery("from Option where id in (:ids)").setParameterList("ids", list).getResultList();
 		}
 		return  optionList;
 		

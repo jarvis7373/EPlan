@@ -33,6 +33,22 @@ public class EngineType {
 
 	@Column(name = "ACTIVE_STATUS")
 	private String activeFlag;
+	
+	
+	public EngineType(){
+		
+	}
+
+	public EngineType(int id, String eName, String displayName, String imageName, String flagStatus,
+			String activeFlag) {
+		super();
+		this.id = id;
+		EName = eName;
+		DisplayName = displayName;
+		this.imageName = imageName;
+		this.flagStatus = flagStatus;
+		this.activeFlag = activeFlag;
+	}
 
 	public int getId() {
 		return id;
@@ -81,6 +97,12 @@ public class EngineType {
 	public void setActiveFlag(String activeFlag) {
 		this.activeFlag = activeFlag;
 	}
+
+	/*@Override
+	public String toString() {
+		return "EngineType [id=" + id + ", EName=" + EName + ", DisplayName=" + DisplayName + ", imageName=" + imageName
+				+ ", flagStatus=" + flagStatus + ", activeFlag=" + activeFlag + "]";
+	}*/
 
 	
 	

@@ -1,47 +1,30 @@
 
 <%@include file="header.jsp"%>
 
-
-  
-
 <script>
 $(document).ready(function () {
+
 $('#productSel').change(function(){
-	
-var productId= $(this).val();
+	var productId= $(this).val();
 	$.get("/api/option?productId="+productId,function(data,status){
-		data=data+"";
-		var val=data.split(",");
 		$('#model').empty().append(" <option value ='' selected disabled='disabled'>Choose Your Model</option>");
-	    if(val.length>2){
-		for(var i=0;i<val.length;i++){
-			$('#model').append("<option>"+val[i]+"</option>")
-		
-		}
-	    }
+		$.each(data,function(i,model){
+			$('#model').append("<option value="+model.id+">"+model.displayName+"</option>")
+		});
 		});
 });
 
 
 $('#model').change(function(){
-	
 	var productId= $(this).val();
 		$.get("/api/EngineType?EngineType=1",function(data,status){
-			//data=data+"";
-			console.log("data ===>" +data);
-			//var val=data.split(",");
-			$('#model').empty().append(" <option value ='' selected disabled='disabled'>Choose Your Engine</option>");
-		  
-			for(var i=0;i<data.length;i++){
-				//$('#Engine').append("<option>"+data[i].EName+"</option>")
-				console.log("Engine ===>" +data);
-		    }
+			$('#Engine').empty().append(" <option value ='' selected disabled='disabled'>Choose Your Engine</option>");
+			$.each(data,function(i,engineType){
+				$('#Engine').append("<option value="+engineType.id+">"+engineType.displayName+"</option>")
+			});
+
 			});
 	});
-
-
-
-
 });
 
 
