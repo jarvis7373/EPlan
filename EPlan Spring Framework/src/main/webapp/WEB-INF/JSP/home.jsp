@@ -35,8 +35,6 @@ $('#model').change(function(){
 			for(var i=0;i<data.length;i++){
 				//$('#Engine').append("<option>"+data[i].EName+"</option>")
 				console.log("Engine ===>" +data);
-				
-			
 		    }
 			});
 	});
@@ -63,7 +61,7 @@ $('#model').change(function(){
 <tr >
 <td rowspan="4">
   <label for="product">Select Your Product</label>
-		<select id="productSel" class="form-control">
+		<select id="productSel" class="form-control" >
 		<option value ="" selected disabled="disabled">Choose Your Product</option>
 		<c:forEach items="${productList}"  var="productList">
 		<option value="${productList.id}" >${productList.displayName}</option>
