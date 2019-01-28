@@ -41,8 +41,15 @@ $(document).ready(function () {
 		});
 });*/
 
-$('#MODEL').empty().append(" <option value ='' selected disabled='disabled'>Choose Your Model</option>");
-$('#MODEL').append("<option value='1'>CAR</option>");
+$.get("/api/option?productId=1",function(data,status){
+	 
+	$('#MODEL').empty().append(" <option value ='' selected disabled='disabled'>Choose Your Model</option>");
+	$.each(data,function(i,option){
+		$('#MODEL').append("<option value="+option.id+">"+option.displayName+"</option>");
+	});
+});
+
+
 
 $('#MODEL').change(function(){
 	var productId= $(this).val();
@@ -56,7 +63,7 @@ $('#MODEL').change(function(){
 	});
 	
 $('#ENGINE').change(function(){
-	var productId= $('#model').val();
+	var productId= $('#MODEL').val();
 		$.get("/api/TransmissionType?TransmissionType="+productId,function(data,status){
 			$('#TRANSMISSION').empty().append(" <option value ='' selected disabled='disabled'>Choose Your Transmission</option>");
 			$.each(data,function(i,TransmissionType){
