@@ -30,7 +30,7 @@ public class TransmissionType {
 	@Column(name = "DISPLAY_NAME")
 	private String displayName;
 
-	@Column(name = "IMAGE_STATUS")
+	@Column(name = "IMAGE_NAME")
 	private String imageName;
 
 	@Column(name = "FLAG_STATUS")

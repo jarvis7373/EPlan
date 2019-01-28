@@ -25,12 +25,24 @@ $('#model').change(function(){
 			});
 	});
 	
-$('#model').change(function(){
-	var productId= $(this).val();
-		$.get("/api/TransmissionType?TransmissionType=1",function(data,status){
+$('#Engine').change(function(){
+	var productId= $('#model').val();
+		$.get("/api/TransmissionType?TransmissionType="+productId,function(data,status){
 			$('#Transmission').empty().append(" <option value ='' selected disabled='disabled'>Choose Your Transmission</option>");
 			$.each(data,function(i,TransmissionType){
 				$('#Transmission').append("<option value="+TransmissionType.id+">"+TransmissionType.displayName+"</option>")
+				
+			});
+			});
+	});
+	
+$('#Transmission').change(function(){
+	var productId= $(this).val();
+		$.get("/api/FuelCapacity?FuelCapacity=1",function(data,status){
+			$('#FuelCapacity').empty().append(" <option value ='' selected disabled='disabled'>Choose Your Fuel Tank Capacity</option>");
+			$.each(data,function(i,FuelCapacity){
+				$('#FuelCapacity').append("<option value="+FuelCapacity.id1+">"+FuelCapacity.displayName+"</option>")
+				
 			});
 			});
 	});
@@ -104,11 +116,12 @@ $('#model').change(function(){
 </tr>
 <tr>
 <td>
- <label for="product">Fule Tank Capacity</label>
-		<select id="product" class="form-control">
-		<option>Car</option>
-		<option>Truck</option>
-		<option>Bus</option>
+ <label for="FuelCapacity">Fule Tank Capacity</label>
+		<select id="FuelCapacity" class="form-control">
+		
+		<option value ="" selected disabled="disabled">Choose Your Fuel Tank Capacity</option>
+		
+		
 		</select>
 </td>
 </tr>	

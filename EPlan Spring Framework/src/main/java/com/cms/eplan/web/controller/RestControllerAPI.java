@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cms.eplan.web.model.EngineType;
+import com.cms.eplan.web.model.FuelCapacity;
 import com.cms.eplan.web.model.Option;
 import com.cms.eplan.web.model.TransmissionType;
 import com.cms.eplan.web.service.EngineTypeService;
 import com.cms.eplan.web.service.FeatureOptionService;
 import com.cms.eplan.web.service.TransmissionTypeService;
+import com.cms.eplan.web.service.FuelCapacityService;
 
 /**
  * 
@@ -36,6 +38,8 @@ public class RestControllerAPI {
 	EngineTypeService typeofengine ;
 	@Autowired
 	TransmissionTypeService typeoftransmission;
+	@Autowired
+	FuelCapacityService FType;
 
 	
 	@GetMapping(value="/api/option",produces=MediaType.APPLICATION_JSON_VALUE)
@@ -63,4 +67,14 @@ public class RestControllerAPI {
 		
 		return (List<TransmissionType>)typeoftransmission.getId(id);
 	}
+	
+	@GetMapping(value="/api/FuelCapacity",produces=MediaType.APPLICATION_JSON_VALUE) 
+	@ResponseBody
+	public List<FuelCapacity> getFID(@RequestParam ("FuelCapacity") int id1){
+		
+		System.out.println("list of values ==>"+(List<FuelCapacity>)FType.getId(id1));
+		
+		return (List<FuelCapacity>)FType.getId(id1);
+	}
+	
 }
