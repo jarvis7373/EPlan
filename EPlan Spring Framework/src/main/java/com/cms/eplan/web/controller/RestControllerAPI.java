@@ -37,17 +37,12 @@ public class RestControllerAPI {
 	@GetMapping(value="/api/option",produces=MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public List<Option> getOption(@RequestParam ("productId") int productId){
-		
-		System.out.println("list of values ==>"+(List<Option>)featureOptionService.findById(productId));
 		return (List<Option>)featureOptionService.findById(productId);
 	}
 		
 	@GetMapping(value="/api/EngineType",produces=MediaType.APPLICATION_JSON_VALUE) 
 	@ResponseBody
 	public List<EngineType> getType(@RequestParam ("EngineType") int eid){
-		
-		System.out.println("list of values ==>"+(List<EngineType>)typeofengine.getTypes(eid));
-		
 		return (List<EngineType>)typeofengine.getTypes(eid);
 	}
 

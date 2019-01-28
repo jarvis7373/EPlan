@@ -32,25 +32,35 @@ select{
  border: 1px solid;
  padding-left: 20px;
  clear: both;
- /*padding-top: 5%; */
- /*padding-bottom: 5%; */
+ padding-top: 5%; 
+ padding-bottom: 5%; 
  padding: 3%;
  color:#727272;
  display:block;
  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
  font-size: 13px;
-	}
-table{
+}
+	
+
+	
+/* table{
 	width:60%;
 	padding-top:2%;
-	}
+	} */ 
 	
-tr, td {
-	padding-bottom:1%;
+/*lable {
+     padding-bottom:1%;
 	text-align: left; 
     color:#727272;
-	padding-left:5%;
-  }
+	 
+  } */
+  
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 17px;
+    font-weight: 400;
+}  
 
 .tablink:hover {
   background-color: #fff;
@@ -59,8 +69,8 @@ tr, td {
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  color: white;
-  padding: 100px 20px;
+ /* color: white; */
+  padding: 70px 20px;
   border:1px solid #C9C9C9;
   
 }
