@@ -22,6 +22,7 @@ $('#model').change(function(){
 			$.each(data,function(i,engineType){
 				$('#Engine').append("<option value="+engineType.id+">"+engineType.displayName+"</option>")
 			});
+
 			});
 	});
 	
@@ -65,7 +66,7 @@ $('#Transmission').change(function(){
 <tr >
 <td rowspan="4">
   <label for="product">Select Your Product</label>
-		<select id="productSel" class="form-control">
+		<select id="productSel" class="form-control" >
 		<option value ="" selected disabled="disabled">Choose Your Product</option>
 		<c:forEach items="${productList}"  var="productList">
 		<option value="${productList.id}" >${productList.displayName}</option>

@@ -28,7 +28,7 @@ import com.cms.eplan.web.service.FuelCapacityService;
 
 
 
- 
+
 @RestController
 public class RestControllerAPI {
 	
@@ -46,7 +46,7 @@ public class RestControllerAPI {
 	@ResponseBody
 	public List<Option> getOption(@RequestParam ("productId") int productId){
 		
-		//System.out.println("list of values ==>"+(List<Option>)featureOptionService.findById(productId));
+		System.out.println("list of values ==>"+(List<Option>)featureOptionService.findById(productId));
 		return (List<Option>)featureOptionService.findById(productId);
 	}
 		
