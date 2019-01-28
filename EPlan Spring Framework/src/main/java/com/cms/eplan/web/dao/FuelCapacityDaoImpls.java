@@ -8,7 +8,8 @@ import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.cms.eplan.web.model.EngineType;
+import com.cms.eplan.web.model.FuelCapacity;
+
 
 
 /**
@@ -18,24 +19,28 @@ import com.cms.eplan.web.model.EngineType;
  */
 @Repository
 @Transactional
-public class EngineTypeDaoImps implements EngineTypeDao {
+public class FuelCapacityDaoImpls implements FuelCapacityDao {
 
 	@Autowired
 	org.hibernate.SessionFactory SessionFactory;
 
 	@Override
-	public void addEngineType(EngineType Etype) {
+	public void addFuelTankType(FuelCapacity Ftype) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public List<EngineType> getTypes(int id) {
+	public List<FuelCapacity> getId(int id1) {
 		Session session = SessionFactory.getCurrentSession();
 		
-		return (List<EngineType>)session.createQuery("from EngineType").getResultList();
+		return (List<FuelCapacity>)session.createCriteria(FuelCapacity.class).list();
+	}
+
+	
+		
 	}
 	
 	
 
-}
+
